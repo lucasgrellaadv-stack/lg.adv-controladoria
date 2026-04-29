@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LG.ADV — Controladoria</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -42,14 +42,14 @@ html,body{height:100%;font-family:Inter,sans-serif;background:var(--bg);color:va
 /* MAIN */
 .main{flex:1;display:flex;flex-direction:column;min-width:0}
 .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:20;flex-shrink:0}
-.topbar-title{font-family:"Playfair Display",serif;font-size:20px;color:var(--navy);flex:1}
+.topbar-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--navy);flex:1}
 .content{padding:22px 24px;flex:1;overflow-y:auto}
 .view{display:none}.view.active{display:block}
 /* KPI */
 .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
 .kpi-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px}
 .kpi-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.09em;margin-bottom:7px;font-weight:600}
-.kpi-value{font-family:"Playfair Display",serif;font-size:26px;font-weight:500;color:var(--text);line-height:1}
+.kpi-value{font-family:'DM Serif Display',serif;font-size:26px;font-weight:500;color:var(--text);line-height:1}
 .kpi-value.green{color:var(--success)}.kpi-value.red{color:var(--danger)}
 /* TABLES */
 .table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
@@ -73,7 +73,7 @@ tbody td.muted{color:var(--text2)}
 .modal-overlay.open{display:flex}
 .modal{background:var(--surface);border-radius:var(--r);width:600px;max-width:100%;box-shadow:0 8px 24px rgba(7,26,54,.14);flex-shrink:0}
 .modal-header{padding:20px 24px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.modal-title{font-family:"Playfair Display",serif;font-size:19px;color:var(--navy)}
+.modal-title{font-family:'DM Serif Display',serif;font-size:19px;color:var(--navy)}
 .modal-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--text3);padding:4px;line-height:1}
 .modal-close:hover{color:var(--text)}
 .modal-body{padding:20px 24px}
@@ -106,7 +106,7 @@ textarea{resize:vertical;min-height:70px}
 .fin-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
 .fin-sum-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px}
 .fin-sum-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;font-weight:600}
-.fin-sum-val{font-family:"Playfair Display",serif;font-size:21px;font-weight:500}
+.fin-sum-val{font-family:'DM Serif Display',serif;font-size:21px;font-weight:500}
 .finance-row{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border);font-size:13px}
 .finance-row:last-child{border-bottom:none}
 .finance-row:hover{background:var(--surface2)}
@@ -119,12 +119,12 @@ textarea{resize:vertical;min-height:70px}
 .dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .dash-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
 .dash-card-header{padding:14px 18px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.dash-card-title{font-family:"Playfair Display",serif;font-size:14px;color:var(--navy);font-weight:500}
+.dash-card-title{font-family:'DM Serif Display',serif;font-size:14px;color:var(--navy);font-weight:500}
 /* DETAIL */
 .detail-back{display:flex;align-items:center;gap:8px;color:var(--navy);font-size:13px;font-weight:500;cursor:pointer;margin-bottom:18px}
 .detail-back:hover{opacity:.7}
 .detail-header{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:22px 24px;margin-bottom:16px;display:flex;align-items:flex-start;justify-content:space-between}
-.detail-name{font-family:"Playfair Display",serif;font-size:23px;color:var(--navy);margin-bottom:4px}
+.detail-name{font-family:'DM Serif Display',serif;font-size:23px;color:var(--navy);margin-bottom:4px}
 .detail-sub{font-size:13px;color:var(--text2)}
 /* TABS */
 .tabs{display:flex;border-bottom:2px solid var(--border);margin-bottom:18px}
@@ -132,7 +132,7 @@ textarea{resize:vertical;min-height:70px}
 .tab:hover{color:var(--navy)}.tab.active{color:var(--navy);border-bottom-color:var(--navy)}
 .tab-content{display:none}.tab-content.active{display:block}
 .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.section-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--navy)}
+.section-title{font-family:'DM Serif Display',serif;font-size:15px;color:var(--navy)}
 /* LOGIN */
 .login-page{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--navy3)}
 .login-box{background:var(--surface);border-radius:var(--r);padding:36px 40px;width:380px;max-width:calc(100vw - 32px);box-shadow:0 8px 24px rgba(7,26,54,.25)}
@@ -201,6 +201,20 @@ const LOGO = ''
 const { createClient } = supabase
 const sb = createClient(SUPABASE_URL, SUPABASE_KEY)
 
+// ESCRITÓRIO COMPARTILHADO
+let _escritorioId = localStorage.getItem('lgadv_escritorio_id') || null
+let _escritorioNome = localStorage.getItem('lgadv_escritorio_nome') || null
+const setEscritorioId = (id, nome) => {
+  _escritorioId = id; _escritorioNome = nome
+  localStorage.setItem('lgadv_escritorio_id', id)
+  localStorage.setItem('lgadv_escritorio_nome', nome || '')
+}
+const clearEscritorioId = () => {
+  _escritorioId = null; _escritorioNome = null
+  localStorage.removeItem('lgadv_escritorio_id')
+  localStorage.removeItem('lgadv_escritorio_nome')
+}
+
 // UTILS
 const fmtVal = v => (parseFloat(v)||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})
 const fmtDate = d => { if(!d) return '—'; const p=String(d).split('T')[0].split('-'); return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:d }
@@ -219,8 +233,8 @@ function statusLancBadge(s){return{pago:'<span class="badge badge-green">Pago</s
 const calcSaldo = ls => ls.reduce((s,l)=>{const v=parseFloat(l.valor||0);return s+(l.direcao==='entrada'?v:-v)},0)
 let _clientesCache=null
 const getUser = async () => { const {data:{user}} = await sb.auth.getUser(); return user }
-const getCachedClientes = async () => { if(!_clientesCache){const{data}=await sb.from('clientes').select('*').order('nome');_clientesCache=data||[]} return _clientesCache }
-const getProcessosByCliente = async cid => { const{data}=await sb.from('processos').select('*').eq('cliente_id',cid).order('criado_em',{ascending:false}); return data||[] }
+const getCachedClientes = async () => { if(!_clientesCache){const{data}=await sb.from('clientes').select('*').eq('escritorio_id',_escritorioId).order('nome');_clientesCache=data||[]} return _clientesCache }
+const getProcessosByCliente = async cid => { const{data}=await sb.from('processos').select('*').eq('escritorio_id',_escritorioId).eq('cliente_id',cid).order('criado_em',{ascending:false}); return data||[] }
 
 // NAV
 let currentView = 'dashboard'
@@ -236,14 +250,46 @@ function nav(view) {
 function toggleSidebar(){document.getElementById('sidebar')?.classList.toggle('open');document.getElementById('sidebar-overlay')?.classList.toggle('open')}
 
 // APP SHELL
+async function renderEscritorioSetup() {
+  const user = await getUser()
+  document.getElementById('app').innerHTML = `
+  <div class="login-page">
+    <div class="login-box" style="max-width:420px">
+      <div class="login-logo">
+        <div style="font-family:'DM Serif Display',serif;font-size:32px;color:var(--navy3);letter-spacing:0.04em;line-height:1;margin-bottom:6px">LG<span style="color:#c8a84b">.</span>ADV</div>
+        <div class="logo-sub">Controladoria</div>
+      </div>
+      <div style="font-size:13px;color:var(--text2);margin-bottom:20px;text-align:center;line-height:1.6">Para compartilhar dados com colegas, use o mesmo código de escritório.</div>
+      <div class="login-error" id="esc-err"></div>
+      <div class="login-field"><label>Código do escritório</label><input type="text" id="esc-codigo" placeholder="Ex: lgadv2024" style="text-transform:lowercase" autocomplete="off"></div>
+      <div class="login-field"><label>Nome do escritório (opcional)</label><input type="text" id="esc-nome" placeholder="Ex: LG Advogados"></div>
+      <button class="btn btn-primary login-btn" onclick="entrarEscritorioHandler()">Entrar no escritório</button>
+      <div style="text-align:center;margin-top:12px;font-size:12px;color:var(--text3)">Logado como <strong>${user?.email}</strong> &nbsp;·&nbsp; <span style="color:var(--navy);cursor:pointer" onclick="doLogout()">Sair</span></div>
+    </div>
+  </div>`
+  document.getElementById('esc-codigo')?.addEventListener('keydown', e => { if(e.key==='Enter') entrarEscritorioHandler() })
+}
+
+async function entrarEscritorioHandler() {
+  const codigo = document.getElementById('esc-codigo').value.trim().toLowerCase().replace(/[^a-z0-9_-]/g,'')
+  const nome = document.getElementById('esc-nome').value.trim()
+  const errEl = document.getElementById('esc-err')
+  if(!codigo || codigo.length < 3) {
+    errEl.textContent = 'Código deve ter pelo menos 3 caracteres'; errEl.classList.add('visible'); return
+  }
+  setEscritorioId(codigo, nome || codigo)
+  renderApp()
+}
+
 async function renderApp() {
   const user = await getUser(); if(!user){renderLogin();return}
+  if(!_escritorioId){renderEscritorioSetup();return}
   document.getElementById('app').innerHTML = `
   <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-logo">
-        <div style="font-family:'Playfair Display',serif;font-size:22px;color:#fff;letter-spacing:0.04em;line-height:1">LG<span style="color:#c8a84b">.</span>ADV</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#fff;letter-spacing:0.04em;line-height:1">LG<span style="color:#c8a84b">.</span>ADV</div>
         <div class="logo-sub">Controladoria</div>
       </div>
       <nav class="sidebar-nav">
@@ -259,6 +305,14 @@ async function renderApp() {
       </nav>
       <div class="sidebar-footer">
         <div class="sidebar-email">${user.email}</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.45);margin-bottom:6px;display:flex;align-items:center;gap:4px">
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="10" height="8" rx="1"/><path d="M4 3V2a2 2 0 0 1 4 0v1"/></svg>
+          Escritório: <strong style="color:rgba(255,255,255,.65)">${_escritorioNome||_escritorioId||'—'}</strong>
+        </div>
+        <button class="btn btn-sm" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.45);border:none;display:flex;align-items:center;gap:5px;margin-bottom:6px;font-size:10px" onclick="trocarEscritorioHandler()">
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6a4 4 0 0 1 7-2.6M10 6a4 4 0 0 1-7 2.6"/><path d="M9 3l1 1-1 1M3 9l-1-1 1-1"/></svg>
+          Trocar escritório
+        </button>
         <button class="btn btn-sm" style="background:rgba(200,168,75,.18);color:var(--gold);border:none;width:100%;justify-content:center;margin-bottom:8px" onclick="document.getElementById('modal-import').classList.add('open')">
           <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v8M4 6l3 3 3-3"/><path d="M2 10v2h10v-2"/></svg> Importar dados
         </button>
@@ -321,14 +375,14 @@ async function doImport() {
   try {
     status.textContent='Importando clientes...'
     for(const c of clientes){
-      const {data,error}=await sb.from('clientes').insert({nome:c.nome,doc:c.doc||null,tipo:c.tipo||'PF',tel:c.tel||null,email:c.email||null,endereco:c.end||c.endereco||null,obs:c.obs||null,anotacoes:c.anotacoes||null,user_id:user.id}).select('id').single()
+      const {data,error}=await sb.from('clientes').insert({nome:c.nome,doc:c.doc||null,tipo:c.tipo||'PF',tel:c.tel||null,email:c.email||null,endereco:c.end||c.endereco||null,obs:c.obs||null,anotacoes:c.anotacoes||null,user_id:user.id,escritorio_id:_escritorioId}).select('id').single()
       if(!error&&data) cMap[c.id]=data.id
       done++; bar.style.width=Math.round(done/total*100)+'%'
     }
     status.textContent='Importando processos...'
     for(const p of processos){
       const newCid=cMap[p.clienteId||p.cliente_id]; if(!newCid){done++;continue}
-      const {data,error}=await sb.from('processos').insert({num:p.num,cliente_id:newCid,tribunal:p.tribunal||'TJSP',area:p.area||'Cível',fase:p.fase||'Conhecimento',autor:p.autor||null,reu:p.reu||null,valor_causa:p.valor||p.valor_causa||0,honorarios:p.honorarios||0,pct_exito:p.exito||p.pct_exito||0,status:p.status||'ativo',obs:p.obs||null,user_id:user.id}).select('id').single()
+      const {data,error}=await sb.from('processos').insert({num:p.num,cliente_id:newCid,tribunal:p.tribunal||'TJSP',area:p.area||'Cível',fase:p.fase||'Conhecimento',autor:p.autor||null,reu:p.reu||null,valor_causa:p.valor||p.valor_causa||0,honorarios:p.honorarios||0,pct_exito:p.exito||p.pct_exito||0,status:p.status||'ativo',obs:p.obs||null,user_id:user.id,escritorio_id:_escritorioId}).select('id').single()
       if(!error&&data) pMap[p.id]=data.id
       done++; bar.style.width=Math.round(done/total*100)+'%'
     }
@@ -336,7 +390,7 @@ async function doImport() {
     for(const l of lancs){
       const newCid=cMap[l.clienteId||l.cliente_id]; if(!newCid){done++;continue}
       const newPid=pMap[l.procId||l.processo_id]||null
-      await sb.from('lancamentos').insert({cliente_id:newCid,cliente_nome:l.clienteNome||l.cliente_nome||'',processo_id:newPid,processo_num:l.procNum||l.processo_num||null,tipo:l.tipo||'honorario',direcao:l.dir||l.direcao||'entrada',valor:l.valor||0,data:l.data||null,vencimento:l.venc||l.vencimento||null,status:l.status||'pendente',descricao:l.desc||l.descricao||null,user_id:user.id})
+      await sb.from('lancamentos').insert({cliente_id:newCid,cliente_nome:l.clienteNome||l.cliente_nome||'',processo_id:newPid,processo_num:l.procNum||l.processo_num||null,tipo:l.tipo||'honorario',direcao:l.dir||l.direcao||'entrada',valor:l.valor||0,data:l.data||null,vencimento:l.venc||l.vencimento||null,status:l.status||'pendente',descricao:l.desc||l.descricao||null,user_id:user.id,escritorio_id:_escritorioId})
       done++; bar.style.width=Math.round(done/total*100)+'%'
     }
     bar.style.width='100%'; status.style.color='var(--success)'; status.textContent='Concluído!'
@@ -351,7 +405,7 @@ async function renderLogin(mode='login') {
   <div class="login-page">
     <div class="login-box">
       <div class="login-logo">
-        <div style="font-family:'Playfair Display',serif;font-size:32px;color:var(--navy3);letter-spacing:0.04em;line-height:1;margin-bottom:6px">LG<span style="color:#c8a84b">.</span>ADV</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:32px;color:var(--navy3);letter-spacing:0.04em;line-height:1;margin-bottom:6px">LG<span style="color:#c8a84b">.</span>ADV</div>
         <div class="logo-sub">Controladoria</div>
       </div>
       <div class="login-error" id="login-err"></div>
@@ -385,13 +439,17 @@ async function doAuth(mode) {
   if(error){errEl.textContent='E-mail ou senha incorretos';errEl.classList.add('visible');return}
   renderApp()
 }
+async function trocarEscritorioHandler(){
+  clearEscritorioId()
+  renderEscritorioSetup()
+}
 async function doLogout(){await sb.auth.signOut();_clientesCache=null;renderLogin()}
 
 // DASHBOARD
 async function renderDashboard(){
   const main=document.getElementById('main'); if(!main)return
   main.innerHTML=`<div class="topbar"><button class="hamburger" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button><div class="topbar-title">Dashboard</div><span style="font-size:12px;color:var(--text3)">${new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'})}</span></div><div class="content"><div class="loading-overlay"><div class="spinner"></div> Carregando...</div></div>`
-  const [{data:cl},{data:pr},{data:la}]=await Promise.all([sb.from('clientes').select('*').order('nome'),sb.from('processos').select('*'),sb.from('lancamentos').select('*').order('data',{ascending:false})])
+  const [{data:cl},{data:pr},{data:la}]=await Promise.all([sb.from('clientes').select('*').eq('escritorio_id',_escritorioId).order('nome'),sb.from('processos').select('*').eq('escritorio_id',_escritorioId),sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId).eq('escritorio_id',_escritorioId).order('data',{ascending:false})])
   _clientesCache=cl||[]
   const clientes=cl||[],processos=pr||[],lancs=la||[]
   const hoje=new Date(),m=hoje.getMonth(),y=hoje.getFullYear()
@@ -415,7 +473,7 @@ async function renderDashboard(){
 async function renderClientes(filter=''){
   const main=document.getElementById('main');if(!main)return
   main.innerHTML=`<div class="topbar"><button class="hamburger" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button><div class="topbar-title">Clientes</div><input type="text" class="topbar-search" placeholder="Buscar..." value="${filter}" oninput="renderClientes(this.value)"><button class="topbar-action" onclick="openModalCliente()"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 1v10M1 6h10"/></svg> Novo cliente</button></div><div class="content"><div class="loading-overlay"><div class="spinner"></div></div></div>${modalClienteHTML()}${modalProcessoHTML()}${modalLancHTML()}`
-  const [{data:cl},{data:pr},{data:la}]=await Promise.all([sb.from('clientes').select('*').order('nome'),sb.from('processos').select('*'),sb.from('lancamentos').select('*')])
+  const [{data:cl},{data:pr},{data:la}]=await Promise.all([sb.from('clientes').select('*').eq('escritorio_id',_escritorioId).order('nome'),sb.from('processos').select('*').eq('escritorio_id',_escritorioId),sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId)])
   _clientesCache=cl||[]
   let list=cl||[]; if(filter)list=list.filter(c=>c.nome.toLowerCase().includes(filter.toLowerCase())||(c.doc||'').includes(filter))
   const tbody=list.map(c=>{
@@ -435,7 +493,7 @@ async function openCliente(id){
   const clientes=await getCachedClientes()
   const c=clientes.find(x=>x.id===id);if(!c)return
   document.getElementById('det-title').textContent=c.nome
-  const [procs,lancs]=await Promise.all([getProcessosByCliente(id),sb.from('lancamentos').select('*').eq('cliente_id',id).order('data',{ascending:false}).then(r=>r.data||[])])
+  const [procs,lancs]=await Promise.all([getProcessosByCliente(id),sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId).eq('cliente_id',id).order('data',{ascending:false}).then(r=>r.data||[])])
   const rec=lancs.filter(l=>l.direcao==='entrada'&&l.status==='pago').reduce((s,l)=>s+parseFloat(l.valor||0),0)
   const des=lancs.filter(l=>l.direcao==='saida').reduce((s,l)=>s+parseFloat(l.valor||0),0)
   const pen=lancs.filter(l=>l.direcao==='entrada'&&l.status==='pendente').reduce((s,l)=>s+parseFloat(l.valor||0),0)
@@ -469,7 +527,7 @@ async function renderProcessos(filter=''){
   const main=document.getElementById('main');if(!main)return
   main.innerHTML=`<div class="topbar"><button class="hamburger" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button><div class="topbar-title">Processos</div><input type="text" class="topbar-search" placeholder="Buscar..." oninput="renderProcessos(this.value)"><button class="topbar-action" onclick="openModalProc()"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 1v10M1 6h10"/></svg> Novo processo</button></div><div class="content"><div class="loading-overlay"><div class="spinner"></div></div></div>${modalProcessoHTML()}`
   const clientes=await getCachedClientes()
-  const{data:pr}=await sb.from('processos').select('*').order('criado_em',{ascending:false})
+  const{data:pr}=await sb.from('processos').select('*').eq('escritorio_id',_escritorioId).eq('escritorio_id',_escritorioId).order('criado_em',{ascending:false})
   let list=pr||[]; if(filter)list=list.filter(p=>(p.num||'').includes(filter)||clientes.find(c=>c.id===p.cliente_id)?.nome.toLowerCase().includes(filter.toLowerCase()))
   main.querySelector('.content').innerHTML=`<div class="table-wrap"><table><thead><tr><th>Nº processo</th><th>Cliente</th><th>Tribunal</th><th>Área</th><th>Fase</th><th>Honorários</th><th>Status</th></tr></thead><tbody>${list.map(p=>`<tr onclick="openModalProc(${JSON.stringify(p).replace(/"/g,'&quot;')})"><td><code style="font-size:11px">${p.num||'—'}</code></td><td>${clientes.find(c=>c.id===p.cliente_id)?.nome||'—'}</td><td class="muted">${p.tribunal||'—'}</td><td><span class="badge badge-navy">${p.area||'—'}</span></td><td class="muted">${p.fase||'—'}</td><td class="muted">${p.honorarios?fmtVal(p.honorarios):'—'}</td><td>${statusBadgeProc(p.status)}</td></tr>`).join('')||'<tr><td colspan="7"><div class="empty-state"><p>Nenhum processo</p></div></td></tr>'}</tbody></table></div>`
   initModalListeners()
@@ -482,10 +540,10 @@ async function renderFinanceiro(tf='',cf=''){
   const clientes=await getCachedClientes()
   const selC=document.getElementById('ff-cli'); if(selC)selC.innerHTML='<option value="">Todos os clientes</option>'+clientes.map(c=>`<option value="${c.id}"${cf==c.id?' selected':''}>${c.nome}</option>`).join('')
   if(tf&&document.getElementById('ff-tipo'))document.getElementById('ff-tipo').value=tf
-  let q=sb.from('lancamentos').select('*').order('data',{ascending:false})
+  let q=sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId).eq('escritorio_id',_escritorioId).order('data',{ascending:false})
   if(tf)q=q.eq('tipo',tf); if(cf)q=q.eq('cliente_id',cf)
   const{data:la}=await q; const lancs=la||[]
-  const{data:allLa}=await sb.from('lancamentos').select('*')
+  const{data:allLa}=await sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId)
   const all=allLa||[]
   const hoje=new Date()
   const rec=all.filter(l=>l.direcao==='entrada'&&l.status==='pago').reduce((s,l)=>s+parseFloat(l.valor||0),0)
@@ -502,7 +560,7 @@ async function delLancGlobal(id){if(!confirm('Excluir?'))return;await sb.from('l
 async function renderInadimplencia(){
   const main=document.getElementById('main');if(!main)return
   main.innerHTML=`<div class="topbar"><button class="hamburger" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button><div class="topbar-title">Inadimplência</div></div><div class="content"><div class="loading-overlay"><div class="spinner"></div></div></div>`
-  const{data:la}=await sb.from('lancamentos').select('*'); const lancs=la||[]
+  const{data:la}=await sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId); const lancs=la||[]
   const hoje=new Date()
   const v=lancs.filter(l=>l.direcao==='entrada'&&(l.status==='vencido'||(l.status==='pendente'&&l.vencimento&&new Date(l.vencimento)<hoje))).sort((a,b)=>(a.vencimento||'').localeCompare(b.vencimento||''))
   const total=v.reduce((s,l)=>s+parseFloat(l.valor||0),0)
@@ -514,7 +572,7 @@ async function renderCompromissos(){
   const main=document.getElementById('main');if(!main)return
   const hoje=today()
   main.innerHTML=`<div class="topbar"><button class="hamburger" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button><div class="topbar-title">Compromissos</div><input type="date" id="comp-filtro" value="${hoje}" onchange="loadComps()" class="topbar-filter" style="width:auto"><button class="topbar-action" onclick="openModalComp()"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 1v10M1 6h10"/></svg> Novo</button></div><div class="content"><div class="loading-overlay"><div class="spinner"></div></div></div>
-  <div class="modal-overlay" id="modal-comp"><div class="modal" style="max-width:500px"><div class="modal-header"><div class="modal-title" id="mc-title">Novo compromisso</div><button class="modal-close" onclick="document.getElementById('modal-comp').classList.remove('open')">×</button></div><div class="modal-body"><input type="hidden" id="mc-id"><div class="form-grid"><div class="field span2"><label>Título *</label><input type="text" id="mc-titulo" placeholder="Ex: Audiência — João da Silva"></div><div class="field"><label>Data *</label><input type="date" id="mc-data"></div><div class="field"><label>Horário</label><input type="time" id="mc-hora"></div><div class="field"><label>Local</label><input type="text" id="mc-local" placeholder="Ex: Fórum Central"></div><div class="field"><label>Tipo</label><select id="mc-tipo"><option value="audiencia">Audiência</option><option value="reuniao">Reunião</option><option value="prazo">Prazo</option><option value="diligencia">Diligência</option><option value="outro">Outro</option></select></div><div class="field"><label>Cliente</label><select id="mc-cli"><option value="">Nenhum</option></select></div><div class="field span2"><label>Observações</label><textarea id="mc-obs" placeholder="Notas..."></textarea></div></div></div><div class="modal-footer"><button class="btn btn-secondary" onclick="document.getElementById('modal-comp').classList.remove('open')">Cancelar</button><button class="btn btn-primary" id="mc-btn" onclick="salvarComp()">Salvar</button></div></div></div>`
+  <div class="modal-overlay" id="modal-comp"><div class="modal" style="max-width:500px"><div class="modal-header"><div class="modal-title" id="mc-title">Novo compromisso</div><button class="modal-close" onclick="document.getElementById('modal-comp').classList.remove('open')">×</button></div><div class="modal-body"><input type="hidden" id="mc-id"><div class="form-grid"><div class="field span2"><label>Título *</label><input type="text" id="mc-titulo" placeholder="Ex: Audiência — João da Silva"></div><div class="field"><label>Data *</label><input type="date" id="mc-data"></div><div class="field"><label>Horário</label><input type="time" id="mc-hora"></div><div class="field"><label>Local</label><input type="text" id="mc-local" placeholder="Ex: Fórum Central"></div><div class="field"><label>Tipo</label><select id="mc-tipo"><option value="prazo_definitivo">Prazo definitivo</option><option value="prazo_cumprido">Prazo cumprido</option><option value="audiencia">Audiência / Julgamento</option><option value="reuniao">Reunião</option><option value="diligencia">Diligência</option><option value="outro">Outro</option></select></div><div class="field"><label>Cliente</label><select id="mc-cli"><option value="">Nenhum</option></select></div><div class="field span2"><label>Observações</label><textarea id="mc-obs" placeholder="Notas..."></textarea></div></div></div><div class="modal-footer"><button class="btn btn-secondary" onclick="document.getElementById('modal-comp').classList.remove('open')">Cancelar</button><button class="btn btn-primary" id="mc-btn" onclick="salvarComp()">Salvar</button></div></div></div>`
   document.addEventListener('click',e=>{if(e.target.classList.contains('modal-overlay'))e.target.classList.remove('open')},{once:true})
   await loadComps()
 }
@@ -522,12 +580,12 @@ async function loadComps(){
   const content=document.querySelector('#main .content');if(!content)return
   const data=document.getElementById('comp-filtro')?.value||today()
   content.innerHTML='<div class="loading-overlay"><div class="spinner"></div></div>'
-  const{data:comps}=await sb.from('compromissos').select('*').eq('data',data).order('hora',{ascending:true})
+  const{data:comps}=await sb.from('compromissos').select('*').eq('escritorio_id',_escritorioId).eq('data',data).order('hora',{ascending:true})
   const dataFmt=new Date(data+'T12:00:00').toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'})
-  const tipoColor={audiencia:'badge-navy',reuniao:'badge-green',prazo:'badge-red',diligencia:'badge-amber',outro:'badge-gray'}
-  const tipoLbl={audiencia:'Audiência',reuniao:'Reunião',prazo:'Prazo',diligencia:'Diligência',outro:'Outro'}
-  if(!comps?.length){content.innerHTML=`<div style="text-align:center;padding:48px 24px"><div style="font-family:'Playfair Display',serif;font-size:17px;color:var(--navy);margin-bottom:8px">${dataFmt}</div><div class="empty-state"><p>Nenhum compromisso para este dia</p></div><button class="btn btn-primary" style="margin-top:16px" onclick="openModalComp()">+ Adicionar compromisso</button></div>`;return}
-  content.innerHTML=`<div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--navy);margin-bottom:16px">${dataFmt} — ${comps.length} compromisso(s)</div><div>${comps.map(c=>`<div class="comp-card"><div class="comp-hora"><div class="comp-hora-val">${c.hora?c.hora.substring(0,5):'—'}</div><div class="comp-hora-label">hrs</div></div><div style="flex:1;min-width:0"><div style="font-weight:600;font-size:14px;color:var(--text);margin-bottom:4px">${c.titulo}</div><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:${c.local?'6px':'0'}"><span class="badge ${tipoColor[c.tipo]||'badge-gray'}">${tipoLbl[c.tipo]||c.tipo}</span>${c.cliente_nome?`<span style="font-size:12px;color:var(--text2)">${c.cliente_nome}</span>`:''}</div>${c.local?`<div style="font-size:12px;color:var(--text3)">📍 ${c.local}</div>`:''} ${c.obs?`<div style="font-size:12px;color:var(--text3);margin-top:4px">${c.obs}</div>`:''}</div><div style="display:flex;gap:4px;flex-shrink:0"><button class="btn btn-sm btn-secondary" onclick="openModalComp(${JSON.stringify(c).replace(/"/g,'&quot;')})">Editar</button><button class="btn btn-sm btn-danger" onclick="delComp(${c.id})">×</button></div></div>`).join('')}</div>`
+  const tipoColor={prazo_definitivo:'badge-red',prazo_cumprido:'badge-green',audiencia:'badge-navy',reuniao:'badge-amber',diligencia:'badge-gold',outro:'badge-gray'}
+  const tipoLbl={prazo_definitivo:'Prazo definitivo',prazo_cumprido:'Prazo cumprido',audiencia:'Audiência / Julgamento',reuniao:'Reunião',diligencia:'Diligência',outro:'Outro'}
+  if(!comps?.length){content.innerHTML=`<div style="text-align:center;padding:48px 24px"><div style="font-family:'DM Serif Display',serif;font-size:17px;color:var(--navy);margin-bottom:8px">${dataFmt}</div><div class="empty-state"><p>Nenhum compromisso para este dia</p></div><button class="btn btn-primary" style="margin-top:16px" onclick="openModalComp()">+ Adicionar compromisso</button></div>`;return}
+  content.innerHTML=`<div style="font-family:'DM Serif Display',serif;font-size:16px;color:var(--navy);margin-bottom:16px">${dataFmt} — ${comps.length} compromisso(s)</div><div>${comps.map(c=>`<div class="comp-card"><div class="comp-hora"><div class="comp-hora-val">${c.hora?c.hora.substring(0,5):'—'}</div><div class="comp-hora-label">hrs</div></div><div style="flex:1;min-width:0"><div style="font-weight:600;font-size:14px;color:var(--text);margin-bottom:4px">${c.titulo}</div><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:${c.local?'6px':'0'}"><span class="badge ${tipoColor[c.tipo]||'badge-gray'}">${tipoLbl[c.tipo]||c.tipo}</span>${c.cliente_nome?`<span style="font-size:12px;color:var(--text2)">${c.cliente_nome}</span>`:''}</div>${c.local?`<div style="font-size:12px;color:var(--text3)">📍 ${c.local}</div>`:''} ${c.obs?`<div style="font-size:12px;color:var(--text3);margin-top:4px">${c.obs}</div>`:''}</div><div style="display:flex;gap:4px;flex-shrink:0"><button class="btn btn-sm btn-secondary" onclick="openModalComp(${JSON.stringify(c).replace(/"/g,'&quot;')})">Editar</button><button class="btn btn-sm btn-danger" onclick="delComp(${c.id})">×</button></div></div>`).join('')}</div>`
 }
 async function openModalComp(c=null){
   const clientes=await getCachedClientes()
@@ -552,7 +610,7 @@ async function salvarComp(){
   const clientes=await getCachedClientes()
   const cli=clientes.find(c=>c.id===cid)
   const idVal=document.getElementById('mc-id').value
-  const obj={titulo,data,hora:document.getElementById('mc-hora').value||null,local:document.getElementById('mc-local').value||null,tipo:document.getElementById('mc-tipo').value,obs:document.getElementById('mc-obs').value||null,cliente_id:cid,cliente_nome:cli?.nome||null,user_id:user.id}
+  const obj={titulo,data,hora:document.getElementById('mc-hora').value||null,local:document.getElementById('mc-local').value||null,tipo:document.getElementById('mc-tipo').value,obs:document.getElementById('mc-obs').value||null,cliente_id:cid,cliente_nome:cli?.nome||null,user_id:user.id,escritorio_id:_escritorioId}
   if(idVal)await sb.from('compromissos').update(obj).eq('id',parseInt(idVal))
   else await sb.from('compromissos').insert(obj)
   document.getElementById('modal-comp').classList.remove('open')
@@ -597,7 +655,7 @@ async function salvarCliente(){
   const btn=document.getElementById('mcli-btn');btn.disabled=true;btn.textContent='Salvando...'
   const user=await getUser()
   const idVal=document.getElementById('mcli-id').value
-  const obj={nome,doc:document.getElementById('mcli-doc').value||null,tipo:document.getElementById('mcli-tipo').value,tel:document.getElementById('mcli-tel').value||null,email:document.getElementById('mcli-email').value||null,endereco:document.getElementById('mcli-end').value||null,obs:document.getElementById('mcli-obs').value||null,user_id:user.id}
+  const obj={nome,doc:document.getElementById('mcli-doc').value||null,tipo:document.getElementById('mcli-tipo').value,tel:document.getElementById('mcli-tel').value||null,email:document.getElementById('mcli-email').value||null,endereco:document.getElementById('mcli-end').value||null,obs:document.getElementById('mcli-obs').value||null,user_id:user.id,escritorio_id:_escritorioId}
   if(idVal)await sb.from('clientes').update(obj).eq('id',parseInt(idVal))
   else await sb.from('clientes').insert(obj)
   _clientesCache=null;document.getElementById('modal-cli').classList.remove('open')
@@ -643,14 +701,14 @@ async function salvarProc(){
   const user=await getUser()
   const idVal=document.getElementById('mproc-id').value
   const hon=parseFloat(document.getElementById('mproc-hon').value)||0
-  const obj={num,cliente_id:cid,tribunal:document.getElementById('mproc-trib').value,area:document.getElementById('mproc-area').value,fase:document.getElementById('mproc-fase').value,autor:document.getElementById('mproc-autor').value||null,reu:document.getElementById('mproc-reu').value||null,valor_causa:parseFloat(document.getElementById('mproc-valor').value)||0,honorarios:hon,pct_exito:parseFloat(document.getElementById('mproc-exito').value)||0,status:document.getElementById('mproc-status').value,obs:document.getElementById('mproc-obs').value||null,user_id:user.id}
+  const obj={num,cliente_id:cid,tribunal:document.getElementById('mproc-trib').value,area:document.getElementById('mproc-area').value,fase:document.getElementById('mproc-fase').value,autor:document.getElementById('mproc-autor').value||null,reu:document.getElementById('mproc-reu').value||null,valor_causa:parseFloat(document.getElementById('mproc-valor').value)||0,honorarios:hon,pct_exito:parseFloat(document.getElementById('mproc-exito').value)||0,status:document.getElementById('mproc-status').value,obs:document.getElementById('mproc-obs').value||null,user_id:user.id,escritorio_id:_escritorioId}
   let procId
   if(idVal){await sb.from('processos').update(obj).eq('id',parseInt(idVal));procId=parseInt(idVal)}
   else{const{data}=await sb.from('processos').insert(obj).select('id').single();procId=data?.id}
   // auto-criar lançamento de honorários se novo processo
   if(!idVal&&hon>0&&procId){
     const clientes=await getCachedClientes();const cli=clientes.find(c=>c.id===cid)
-    await sb.from('lancamentos').insert({cliente_id:cid,cliente_nome:cli?.nome||'',processo_id:procId,processo_num:num,tipo:'honorario',direcao:'entrada',valor:hon,data:today(),vencimento:null,status:'pendente',descricao:'Processo judicial',user_id:user.id})
+    await sb.from('lancamentos').insert({cliente_id:cid,cliente_nome:cli?.nome||'',processo_id:procId,processo_num:num,tipo:'honorario',direcao:'entrada',valor:hon,data:today(),vencimento:null,status:'pendente',descricao:'Processo judicial',user_id:user.id,escritorio_id:_escritorioId})
   }
   _clientesCache=null;document.getElementById('modal-proc').classList.remove('open')
   toast('Processo salvo');btn.disabled=false;btn.textContent='Salvar'
@@ -737,7 +795,7 @@ async function salvarLanc(){
   if(pid){const procs=await getProcessosByCliente(cid);pnum=procs.find(p=>p.id===pid)?.num||''}
   const idVal=document.getElementById('mlanc-id').value
   const tipo=document.getElementById('mlanc-tipo').value
-  const base={cliente_id:cid,cliente_nome:cli?.nome||'',processo_id:pid,processo_num:pnum,tipo,direcao:document.getElementById('mlanc-dir').value,valor:val,data:document.getElementById('mlanc-data').value,status:document.getElementById('mlanc-status').value,descricao:document.getElementById('mlanc-desc').value||null,user_id:user.id}
+  const base={cliente_id:cid,cliente_nome:cli?.nome||'',processo_id:pid,processo_num:pnum,tipo,direcao:document.getElementById('mlanc-dir').value,valor:val,data:document.getElementById('mlanc-data').value,status:document.getElementById('mlanc-status').value,descricao:document.getElementById('mlanc-desc').value||null,user_id:user.id,escritorio_id:_escritorioId}
   try{
     if(idVal){
       await sb.from('lancamentos').update({...base,vencimento:document.getElementById('mlanc-venc').value||null}).eq('id',parseInt(idVal))
@@ -771,7 +829,7 @@ async function salvarLanc(){
 // INIT
 (async()=>{
   const{data:{user}}=await sb.auth.getUser()
-  if(user)renderApp(); else renderLogin()
+  if(user){ if(_escritorioId) renderApp(); else renderEscritorioSetup() } else renderLogin()
   sb.auth.onAuthStateChange((e,s)=>{if(e==='SIGNED_OUT')renderLogin()})
 })()
 </script>

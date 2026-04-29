@@ -413,10 +413,12 @@ async function renderLogin(mode='login') {
       <div class="login-field"><label>Senha</label><input type="password" id="auth-pass" placeholder="••••••••"><\/div>
       ${mode==='signup'?'<div class="login-field"><label>Confirmar senha</label><input type="password" id="auth-pass2" placeholder="••••••••"></div>':''}
       <button class="btn btn-primary login-btn" onclick="doAuth('${mode}')"> ${mode==='login'?'Entrar':'Criar conta'}</button>
-      <div class="login-footer">${mode==='login'?'Não tem conta? <span class="login-toggle" onclick="renderLogin('signup')">Criar conta</span>':'Já tem conta? <span class="login-toggle" onclick="renderLogin('login')">Entrar</span>'}</div>
+      <div class="login-footer" id="login-footer-links"></div>
     </div>
   </div>`
   document.getElementById('auth-pass')?.addEventListener('keydown',e=>{if(e.key==='Enter')doAuth(mode)})
+  const lf = document.getElementById('login-footer-links')
+  if(lf) lf.innerHTML = mode==='login' ? 'Não tem conta? <span class="login-toggle" onclick="renderLogin(\'signup\')">Criar conta</span>' : 'Já tem conta? <span class="login-toggle" onclick="renderLogin(\'login\')">Entrar</span>'
 }
 async function doAuth(mode) {
   const email=document.getElementById('auth-email').value.trim()
@@ -449,7 +451,7 @@ async function doLogout(){await sb.auth.signOut();_clientesCache=null;renderLogi
 async function renderDashboard(){
   const main=document.getElementById('main'); if(!main)return
   main.innerHTML=`<div class="topbar"><button class="hamburger" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button><div class="topbar-title">Dashboard</div><span style="font-size:12px;color:var(--text3)">${new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'})}</span></div><div class="content"><div class="loading-overlay"><div class="spinner"></div> Carregando...</div></div>`
-  const [{data:cl},{data:pr},{data:la}]=await Promise.all([sb.from('clientes').select('*').eq('escritorio_id',_escritorioId).order('nome'),sb.from('processos').select('*').eq('escritorio_id',_escritorioId),sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId).eq('escritorio_id',_escritorioId).order('data',{ascending:false})])
+  const [{data:cl},{data:pr},{data:la}]=await Promise.all([sb.from('clientes').select('*').eq('escritorio_id',_escritorioId).order('nome'),sb.from('processos').select('*').eq('escritorio_id',_escritorioId),sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId).order('data',{ascending:false})])
   _clientesCache=cl||[]
   const clientes=cl||[],processos=pr||[],lancs=la||[]
   const hoje=new Date(),m=hoje.getMonth(),y=hoje.getFullYear()
@@ -527,7 +529,7 @@ async function renderProcessos(filter=''){
   const main=document.getElementById('main');if(!main)return
   main.innerHTML=`<div class="topbar"><button class="hamburger" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button><div class="topbar-title">Processos</div><input type="text" class="topbar-search" placeholder="Buscar..." oninput="renderProcessos(this.value)"><button class="topbar-action" onclick="openModalProc()"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 1v10M1 6h10"/></svg> Novo processo</button></div><div class="content"><div class="loading-overlay"><div class="spinner"></div></div></div>${modalProcessoHTML()}`
   const clientes=await getCachedClientes()
-  const{data:pr}=await sb.from('processos').select('*').eq('escritorio_id',_escritorioId).eq('escritorio_id',_escritorioId).order('criado_em',{ascending:false})
+  const{data:pr}=await sb.from('processos').select('*').eq('escritorio_id',_escritorioId).order('criado_em',{ascending:false})
   let list=pr||[]; if(filter)list=list.filter(p=>(p.num||'').includes(filter)||clientes.find(c=>c.id===p.cliente_id)?.nome.toLowerCase().includes(filter.toLowerCase()))
   main.querySelector('.content').innerHTML=`<div class="table-wrap"><table><thead><tr><th>Nº processo</th><th>Cliente</th><th>Tribunal</th><th>Área</th><th>Fase</th><th>Honorários</th><th>Status</th></tr></thead><tbody>${list.map(p=>`<tr onclick="openModalProc(${JSON.stringify(p).replace(/"/g,'&quot;')})"><td><code style="font-size:11px">${p.num||'—'}</code></td><td>${clientes.find(c=>c.id===p.cliente_id)?.nome||'—'}</td><td class="muted">${p.tribunal||'—'}</td><td><span class="badge badge-navy">${p.area||'—'}</span></td><td class="muted">${p.fase||'—'}</td><td class="muted">${p.honorarios?fmtVal(p.honorarios):'—'}</td><td>${statusBadgeProc(p.status)}</td></tr>`).join('')||'<tr><td colspan="7"><div class="empty-state"><p>Nenhum processo</p></div></td></tr>'}</tbody></table></div>`
   initModalListeners()
@@ -540,7 +542,7 @@ async function renderFinanceiro(tf='',cf=''){
   const clientes=await getCachedClientes()
   const selC=document.getElementById('ff-cli'); if(selC)selC.innerHTML='<option value="">Todos os clientes</option>'+clientes.map(c=>`<option value="${c.id}"${cf==c.id?' selected':''}>${c.nome}</option>`).join('')
   if(tf&&document.getElementById('ff-tipo'))document.getElementById('ff-tipo').value=tf
-  let q=sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId).eq('escritorio_id',_escritorioId).order('data',{ascending:false})
+  let q=sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId).order('data',{ascending:false})
   if(tf)q=q.eq('tipo',tf); if(cf)q=q.eq('cliente_id',cf)
   const{data:la}=await q; const lancs=la||[]
   const{data:allLa}=await sb.from('lancamentos').select('*').eq('escritorio_id',_escritorioId)
@@ -833,5 +835,4 @@ async function salvarLanc(){
   sb.auth.onAuthStateChange((e,s)=>{if(e==='SIGNED_OUT')renderLogin()})
 })()
 </script>
-</body>
-</html>
+</bo
